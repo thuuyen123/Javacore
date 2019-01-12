@@ -15,13 +15,10 @@ public class Store{
     public Product[] products;
     private String sp;
     public void addProduct(){
-        
         Scanner sc= new Scanner(System.in); 
         System.out.println("Nhap san pham: ");
         this.sp = sc.nextLine();
        
-        
-        
     }
     
 }

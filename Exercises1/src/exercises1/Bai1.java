@@ -3,18 +3,25 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package test;
+package exercises1;
+
+import java.util.Scanner;
 
 /**
  *
  * @author Thu Uyên
  */
-public class Test {
+public class Bai1 {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Nhap so > ");
+        int n = sc.nextInt();
+        System.out.println("Ket qua\n %d^2=" + (int)Math.pow(n,2));
+        //sout tap
         // TODO code application logic here
     }
     

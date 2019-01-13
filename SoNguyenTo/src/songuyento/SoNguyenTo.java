@@ -50,12 +50,12 @@ public class SoNguyenTo {
         }
         return true;
     }
-    public int timSoNguyenToTiepTheo(){
+    public int timSoNguyenToTiepTheo(int n){
         Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        int temp=n;
+        //int n = sc.nextInt();
+        int temp=n++;
         int kt2=0;
-        while(temp>0){
+        while(temp>n){
             if(isSoNguyenTo(temp)){
                 kt2=1;
                 break;
@@ -64,13 +64,21 @@ public class SoNguyenTo {
             else temp++;
         }
         if(kt2==1) 
-            return temp; 
-        
+            return temp;
+        else return 0;
+    }
+    void display(int a){
+        System.out.println(""+a);
     }
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        SoNguyenTo s = new SoNguyenTo();
+        Scanner sc =new Scanner(System.in);
+        System.out.println("Nhap x: ");
+        int x = sc.nextInt();
+        s.display(s.timSoNguyenToTiepTheo(x));
         // TODO code application logic here
     }
     

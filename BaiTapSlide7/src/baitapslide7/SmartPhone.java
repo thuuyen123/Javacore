@@ -35,6 +35,13 @@ class SmartPhone extends Product{
         System.out.println("Nhap sim: ");
         int sim = sc.nextInt();
     }
+    @Override
+    public void prinInfo(){
+        super.prinInfo();
+        if(this.hasCamera ==true) System.out.println("Co camera");
+        else System.out.println("Ko co camera");
+        System.out.println("Sim: "+sim);
+    }
     
 }
 //	private boolean hasCamera;

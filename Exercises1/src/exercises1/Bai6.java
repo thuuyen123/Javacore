@@ -12,7 +12,7 @@ import java.util.Scanner;
  * @author Thu Uyên
  */
 public class Bai6 {
-    public static void main(String[] args) {
+    public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         System.out.print("Nhap a > ");
         int a = sc.nextInt();

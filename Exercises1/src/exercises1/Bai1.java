@@ -20,7 +20,8 @@ public class Bai1 {
         Scanner sc = new Scanner(System.in);
         System.out.print("Nhap so > ");
         int n = sc.nextInt();
-        System.out.println("Ket qua\n %d^2=" + (int)Math.pow(n,2));
+        System.out.printf("Ket qua\n %d^2= %d\n", n, n*n);
+        
         //sout tap
         // TODO code application logic here
     }

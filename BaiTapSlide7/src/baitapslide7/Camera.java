@@ -35,5 +35,11 @@ public class Camera extends Product {
         this.hasWifi= choise == 1 ? true : false;
         
     }
+    @Override
+    public void prinInfo(){
+        super.prinInfo();
+        if(this.hasWifi == true) System.out.println("Co wifi");
+        else System.out.println("ko co wifi");
+    }
     
 }

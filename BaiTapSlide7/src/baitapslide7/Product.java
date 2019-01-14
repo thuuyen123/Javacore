@@ -63,6 +63,7 @@ public class Product {
         Scanner sc= new Scanner(System.in);
         System.out.print("Nhap ma san pham: ");
         setId(sc.nextInt());
+        sc.nextLine();
         System.out.print("Nhap ten san pham: ");
         setName(sc.nextLine());
         System.out.print("Nhap gia san pham: ");
@@ -70,5 +71,10 @@ public class Product {
         System.out.print("Nhap so luong san pham: ");
         setQuantity(sc.nextInt());
     }
-  
+    public void prinInfo(){
+        System.out.println("Ma san pham: "+ getId());
+        System.out.println("Ten san pham: "+getName());
+        System.out.println("Gia san pham: "+getPrice());
+        System.out.println("So luong: " + getQuantity());
+    }
 }

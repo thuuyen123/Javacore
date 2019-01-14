@@ -42,9 +42,11 @@ public class Store{
         switch(choice){
             case 1:{
                 product = new SmartPhone();
+                break;
             }
             case 2:{
                 product = new Camera();
+                break;
             }
         }
         product.addNew();

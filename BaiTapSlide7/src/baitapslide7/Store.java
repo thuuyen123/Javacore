@@ -35,8 +35,10 @@ public class Store{
         System.out.println("Nhap loai san pham:");
         System.out.println("1.SmartPhone");
         System.out.println("2.Camera");
+        System.out.println("Nhap lựa chon: ");
         int choice = sc.nextInt();
-        Product product = new Product();
+        sc.nextLine();
+        Product product = null;
         switch(choice){
             case 1:{
                 product = new SmartPhone();

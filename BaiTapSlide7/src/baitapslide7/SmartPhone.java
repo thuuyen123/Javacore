@@ -40,7 +40,7 @@ class SmartPhone extends Product{
         super.prinInfo();
         if(this.hasCamera ==true) System.out.println("Co camera");
         else System.out.println("Ko co camera");
-        System.out.println("Sim: "+sim);
+        System.out.println("Sim: "+ sim);
     }
     
 }

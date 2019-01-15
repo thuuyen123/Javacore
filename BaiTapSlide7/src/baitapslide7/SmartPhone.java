@@ -40,53 +40,9 @@ class SmartPhone extends Product{
         super.prinInfo();
         if(this.hasCamera ==true) System.out.println("Co camera");
         else System.out.println("Ko co camera");
-        System.out.println("Sim: "+ sim);
+        
+        System.out.println("Sim: " + sim);
     }
     
 }
-//	private boolean hasCamera;
-//    private int sim;
-//    public SmartPhone(){
-//    	super();
-//    }
-//    public SmartPhone(int id,String name,boolean hasCamera,int sim){
-//    	super(id,name)//sử dụng lại code của phương thức lớp cha tương ứng
-//        this.hasCamera = hasCamera;
-//        this.sim = sim;
-//    }
-//    @Override
-//    public void addNew(){
-//    	super();
-//    	Scanner sc = new Scanner(System.in);
-//        System.out.println("nhap hasCamera:(1/0)");
-//        int choice = sc.nextInt();
-//        this.hasCamera = choice == 1 ?  true: false;
-//        System.out.println("nhap sim:");
-//		this.sim = sc.nextInt();
-//    }
-//}
-//class Product{
-//	private int id;
-//    private String name;
-//    
-//    public Product(){}
-//    
-//    public Product(int id,String name){
-//    	this.id  = id;
-//        this.name = name;
-//    }
-//    
-//    public get/Set...
-//   
-//   	public void addNew(){
-//    	Scanner sc = new Scanner(System.in);
-//        System.out.println("nhap id");
-//        this.id = sc.nextInt();
-//        System.out.println("nhap name");
-//        this.name = sc.nextLine();
-//    }
 
-  
-    
-        
-    

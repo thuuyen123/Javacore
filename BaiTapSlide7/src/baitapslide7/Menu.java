@@ -42,7 +42,7 @@ public class Menu {
                     s.search(ten);
                     break;
                 }
-                case 4:// em vẫn ko biết muốn thoát hẳn ra khỏi chương trình thì làm thế nào!
+                case 4:
                     break;
             }
         if(lc ==4) break;

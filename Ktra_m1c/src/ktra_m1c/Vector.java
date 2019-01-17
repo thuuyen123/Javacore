@@ -16,7 +16,9 @@ import java.util.Scanner;
 public class Vector {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
+
         System.out.println("Nhap vector A:");
+
         float[] a = new float[3];
         for(int i=0;i<3;i++){
             a[i]= sc.nextFloat();

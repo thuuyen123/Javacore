@@ -12,7 +12,53 @@ import java.util.Scanner;
  * @author Thu Uyên
  */
 public class Doc_so {
-
+    public static String chuyenDoiGiaTRi(int n){
+        String doc = "";
+        switch(n){
+           case 0: break;
+           case 1:{
+               doc = "một";
+               break;
+           }
+           case 2:{
+               doc = "hai";
+               break;
+           }
+           case 3:{
+               doc = "ba";
+               break;
+           }
+           case 4:{
+               doc = "bốn";
+               break;
+           }
+           case 5:{
+               doc = "năm";
+               break;
+           }
+           case 6:{
+               doc = "sáu";
+               break;
+           }
+           case 7:{
+               doc = "bảy";
+               break;
+           }
+           case 8:{
+               doc = "tám";
+               break;
+           }
+           case 9:{
+               doc = "chín";
+               break;
+           }
+        
+    }
+        return doc;
+  }
+//    public static String chuyenDoiHang(int n){
+//        
+//    }
     /**
      * @param args the command line arguments
      */

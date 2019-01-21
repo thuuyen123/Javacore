@@ -30,7 +30,6 @@ public class Bai9 {
         int n = sc.nextInt();
         double cos =0;
         for(int i=0;i<=n;i++){
-            
             cos  += pow(-1,i)*pow(x,2*i)/ b.giaiThua(2*i);
         }
         System.out.printf("Cos(x) = %.4f", cos);

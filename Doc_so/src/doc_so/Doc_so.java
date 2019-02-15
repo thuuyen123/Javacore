@@ -15,7 +15,11 @@ public class Doc_so {
     public static String chuyenDoiGiaTRi(int n){
         String doc = "";
         switch(n){
-           case 0: break;
+           case 0:{
+               doc = "không";
+               break;
+           }
+               
            case 1:{
                doc = "một";
                break;
@@ -78,7 +82,6 @@ public class Doc_so {
             if(count ==2 ) System.out.println("Hàng chục");
             if(count ==3 ) System.out.println("Hàng trăm");
         }
-      
-    }
-    
+        
+        }
 }

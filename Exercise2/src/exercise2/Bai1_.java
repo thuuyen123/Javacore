@@ -12,11 +12,7 @@ import java.util.Scanner;
  *
  * @author Thu Uyên
  */
-public class Bai1_ptb2 {
-
-    /**
-     * @param args the command line arguments
-     */
+public class Bai1_ {
     public static void main(String[] args) {
         // TODO code application logic here
         Scanner pt = new Scanner(System.in );
@@ -50,5 +46,3 @@ public class Bai1_ptb2 {
         }
     }
 }
-    
-

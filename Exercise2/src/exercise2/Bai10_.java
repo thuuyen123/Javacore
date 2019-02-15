@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author Thu Uyên
  */
-public class Bai10 {
+public class Bai10_ {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Nhap n: ");
@@ -26,5 +26,4 @@ public class Bai10 {
         else System.out.println("Ko phải đõi xứng");
                 
     }
-           
 }

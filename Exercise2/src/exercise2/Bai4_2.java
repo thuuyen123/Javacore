@@ -11,12 +11,16 @@ import java.util.Scanner;
  *
  * @author Thu Uyên
  */
-public class Bai4_1 {
+public class Bai4_2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        int min = 999999999;
         int n;
-   //     while(n==0){
-            
-        }
+        do{
+            System.out.println("Nhap so: ");
+             n = sc.nextInt();
+            if(n<min && n!=0) min = n;
+        }while(n != 0);
+        System.out.println("SO nho nhat: " +min);
     }
-//}
+}

@@ -3,30 +3,29 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package bosung;
+package buoi5chuabai;
+
 import java.util.Scanner;
 
 /**
  *
  * @author Thu Uyên
  */
-public class Bai4_1 {
+public class Bai5 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Nhap do cao h =");
-        int h = sc.nextInt();
-        for(int i=0;i<h;i++){
-            //in khoang trang
-            for(int k=0;k<h-i-1;k++){
-                System.out.print(" ");
-            }
-            for(int j=1;j<=2*i+1;j++){
-                System.out.print("*");
+        System.out.println("Nhap hang m");
+        int m = sc.nextInt();
+        System.out.println("Nhap cot n");
+        int n = sc.nextInt();
+        
+        System.out.println("Hinh chu nhat dac kich thuoc mxn:");
+        
+        for (int i = 0; i < m ; i++) {
+            for(int j=0;j<n;j++){
+                System.out.print("* ");
             }
             System.out.println("");
-            
         }
     }
-    
-    
 }

@@ -45,7 +45,7 @@ public class Bai3_m2c {
         }
         if(kt1==1) System.out.println("Ma tran tren ko phai ma tran 0");
         else System.out.println("Ma tran tren la ma tran 0");
-        
+       
         for(int i=0;i<3;i++){
             for(int j=0;j<3;j++){
                 if(a[i][j]!=a[j][i]){
@@ -59,5 +59,14 @@ public class Bai3_m2c {
         if(kt3==1) System.out.println("Ma tran tren ko phai ma tran doi sung");
         else System.out.println("Ma tran tren la ma tran doi xung");
     }
-    
-}
+   
+}//nếu nxm th n!= m thì ko phải là ma trận đối xứng
+   // for(i->n) a[i][n-i-1] == a[n-i-1][i] 
+    /* 
+        1  // i =1 đến n-1
+    ==> so sánh nửa trên
+        for(j:0->j<i)
+       
+            i =0 -> n-1;
+            j=i+1-> n(đến n là đến dòng n)
+    */

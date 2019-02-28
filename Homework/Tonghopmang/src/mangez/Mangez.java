@@ -5,6 +5,7 @@
  */
 package mangez;
 
+import java.util.Random;
 import java.util.Scanner;
 
 /**
@@ -14,99 +15,57 @@ import java.util.Scanner;
 public class Mangez {
 
     
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in); 
-        int[] a = new int[5];
-        System.out.print("Nhap mang: ");
-        for(int i=0;i<5;i++){
-            a[i] = sc.nextInt();
+    public static void main(String args[]){
+        Random rd = new Random();
+        int a[] = new int[15];
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Mảng ngẫu nhiên gồm 15 phần tử: ");
+        int x;
+        for(int i=0;i<15;i++){
+            int  number = rd.nextInt();
+            x = number%100;
+            //System.out.printf("%d ", Math.abs(x));
+            a[i] = Math.abs(x);
+            System.out.printf("%d ", a[i]);
         }
-        Tinh b = new Tinh();
-        System.out.println("chon thao tac so:");
-        int lc = sc.nextInt();
-        switch(lc){
-            case 0: break;
-            case 1:{
-                
-                b.sum();
-                break;
+        System.out.println();
+        int temp;
+        System.out.println("Mảng được sắp xếp tăng dần là: ");
+        for(int i=0;i<15;i++){
+            for(int j=i+1;j<15;j++){
+                if(a[i]>a[j]){
+                    temp = a[i];
+                    a[i] = a[j];
+                    a[j] = temp;
+                }
             }
-            case 2:{
-                
-                b.sumle();
-                break;
-            }
-            case 3:{
-                b.sumch();
-                break;
-            }
-            case 4:{
-                b.max();
-                break;
-                
-            }
-            case 5:{
-                b.min();
-                break;
-            }
-            case 6:{
-                b.chia();
-                break;
-            }
+            System.out.printf("%d ", a[i]);
         }
-   }
-    
-}
-class Tinh{
-       int[] a = new int[5];
-//   Scanner sc = new Scanner(System.in);
-//   void init(){
-//       for(int i=0;i<5;i++){
-//           a[i]= sc.nextInt();
-//       }
-//   }
-    void sum(){
-            int tong =0;
-            for(int i=0;i<5;i++){
-                tong += a[i];
+        System.out.println();
+        System.out.println("Mảng được sắp xếp giảm dần là: ");
+        for(int i=0;i<15;i++){
+            for(int j=i+1;j<15;j++){
+                if(a[i]<a[j]){
+                    temp = a[i];
+                    a[i] = a[j];
+                    a[j] = temp;
+                }
             }
-        System.out.print("Tong:"+ tong);
-    }
-    void sumle(){
-        int tongle = 0;
-        for(int i=0;i<5;i++){
-            if(a[i]% 2 !=0)  
-                tongle += a[i];
+            System.out.printf("%d ", a[i]);
         }
-        System.out.println("Tong la : " +tongle);
-    }
-    void sumch(){
-        int tongch=0;
-        for(int i=0;i<5;i++){
-            if(a[i]%2==0) 
-                tongch +=a[i];
+        System.out.println();
+        int count1 =0;
+        for(int i=0;i<15;i++){
+            if(a[i]%2==0)
+                count1++;
         }
-         System.out.println("Tong la : " +tongch);
-    }
-    void max(){
-        int max=0;
-        for(int i=0;i<5;i++){
-            if(a[i]>max )  max=a[i];
+        System.out.println("Số phần tử chẵn của mảng là: " +count1);
+        int count2=0;
+        for(int i=0;i<15;i++){
+            if(a[i]%2!=0)
+                count2++;
         }
-        System.out.println("phan tu lon nhat trong mang la : "+ max);
-    }
-    void min(){
-        int min=1000000;
-        for(int i=0;i<5;i++){
-            if(a[i]<min )  min=a[i];
-        }
-        System.out.println("phan tu lon nhat trong mang la : "+ min);
-       
-    }
-    void chia(){
-        for(int i=0;i<5;i++){
-            if(a[i]%3 ==0) System.out.printf("", a[i]);
-        }
+        System.out.println("Số phần tử lẻ của mảng là: " +count2);
     }
 
 }

@@ -13,51 +13,57 @@ import java.util.Scanner;
  * @author Thu Uyên
  */
 public class Bai4 {
-    static void swap(int a, int b){
-        int temp =a;
-        a=b;
-        b=temp;
-    }
+   
     // 3 5 6 7 1
-    static void sXtang(int a[]){
-        for(int i=0;i<a.length;i++){
-            for(int j=a.length-1;j>=i+1;j--){
-                if(a[i]>a[j]) swap(a[i],a[j]); 
+    public static void sXtang(int a[]){
+        int temp;
+        for(int i=0;i<a.length-1;i++){
+            for(int j=a.length-1;j>i;j--){
+                if(a[j]<a[j-1]) {
+                    temp = a[j];
+                    a[j] = a[j-1];
+                    a[j-1] = temp;
+                }
             }
         }
-        System.out.println("Mảng sau khi sắp xếp: ");
+        System.out.println("Mảng sau khi sắp xếp tăng dần: ");
         for (int i = 0; i < a.length; i++) {
             System.out.print(""+a[i]+" ");  
         }
         System.out.println("");
     }
     
-    static void sXgiam(int a[]){
-        for(int i=0;i<a.length;i++){
-            for(int j=a.length-1;j>=i+1;j--){
-                if(a[i]<a[j]) swap(a[i],a[j]); 
+    public static void sXgiam(int a[]){
+        int temp;
+        for(int i=0;i<a.length-1;i++){
+            for(int j=a.length-1;j>i;j--){
+                if(a[j]>a[j-1]) {
+                    temp = a[j];
+                    a[j] = a[j-1];
+                    a[j-1] = temp;
+                }
             }
         }
-        System.out.println("Mảng sau khi sắp xếp: ");
+        System.out.println("Mảng sau khi sắp xếp giảm dần: ");
         for (int i = 0; i < a.length; i++) {
             System.out.print(""+a[i]+" ");
             
         }
         System.out.println("");
     }
-    static void DemC(int a[]){
+    public static void DemC(int a[]){
         int demc=0;
         for (int i = 0; i < a.length; i++) {
             if(a[i]%2==0) demc++;
         }
         System.out.println("Đếm chẵn = "+demc);
     }
-    static void Deml(int a[]){
+    public static void Deml(int a[]){
         int deml=0;
         for (int i = 0; i < a.length; i++) {
-            if(a[i]%2==0) deml++;
+            if(a[i]%2 !=0) deml++;
         }
-        System.out.println("Đếm lẻ = "+deml);
+        System.out.println("Đếm lẻ = "+ deml);
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -68,8 +74,9 @@ public class Bai4 {
         }
         System.out.println("Mảng vừa ramdom được: ");
         for (int i = 0; i < a.length; i++) {
-            System.out.println(""+a[i]+" "); 
+            System.out.print(""+a[i]+" "); 
         }
+        System.out.println("");
         sXtang(a);
         sXgiam(a);
         DemC(a);

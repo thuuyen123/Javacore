@@ -79,7 +79,14 @@ public class SinhVien {
     public void Nhap(){
         Scanner sc = new Scanner(System.in);
         System.out.println("Nhập tên sinh viên");
-        ten = sc.nextLine();
+     //   do{
+            try{
+                ten = sc.nextLine();
+            }catch(Exception e){
+                System.out.println("Đã xảy ra lỗi");
+            }
+   //     }while(ten.)
+        
         System.out.println("Nhập mã sinh viên");
         maSV = sc.nextLine();
         System.out.println("Nhập lớp");
@@ -105,3 +112,6 @@ public class SinhVien {
         return "";
     }
 }
+//1 2 3 
+//4 5 6
+//7 8 9

@@ -12,30 +12,36 @@ import java.util.Scanner;
  * @author Thu Uyên
  */
 public class Student {
+
     private String maSV;
     private float diem;
     private int tuoi;
     private String lop;
-    public Student(){
-        
+
+    public Student() {
+
     }
-    public Student(String maSV, float diem, int tuoi, String lop){
-        this.maSV= maSV;
-        this.diem= diem;
-        this.tuoi=tuoi;
-        this.lop=lop;
+
+    public Student(String maSV, float diem, int tuoi, String lop) {
+        this.maSV = maSV;
+        this.diem = diem;
+        this.tuoi = tuoi;
+        this.lop = lop;
     }
-    
-    public String getMaSV(){
-       return maSV;
-     }
-    public float getDiem(){
+
+    public String getMaSV() {
+        return maSV;
+    }
+
+    public float getDiem() {
         return diem;
     }
-    public int getTuoi(){
+
+    public int getTuoi() {
         return tuoi;
     }
-    public String getLop(){
+
+    public String getLop() {
         return lop;
     }
 
@@ -54,50 +60,55 @@ public class Student {
     public void setLop(String lop) {
         this.lop = lop;
     }
-    public void inputInfo(){
+
+    public void inputInfo() {
         Scanner sc = new Scanner(System.in);
         // thieu dk chua 8 ky tu :v
         System.out.print("Nhap ma sinh vien: ");
-        setMaSV(sc.nextLine()); 
-        
-        do{
+        setMaSV(sc.nextLine());
+
+        do {
             System.out.print("Nhap diem trung binh sinh vien: ");
-            setDiem(sc.nextFloat()); 
-        }while(diem < 0.0 || diem >10.0);
-        do{
+            setDiem(sc.nextFloat());
+        } while (diem < 0.0 || diem > 10.0);
+        do {
             System.out.print("Nhap tuoi: ");
             setTuoi(sc.nextInt());
-        }while(tuoi < 18);
+        } while (tuoi < 18);
         //ko biet viet dieu kien :v
         sc.nextLine();
-        System.out.print("NHap lop: ");
-        setLop(sc.nextLine());
+        do {
+            System.out.print("NHap lop: ");
+            setLop(sc.nextLine());
+        } while (this.lop.charAt(1) != 'A' || this.lop.charAt(1) != 'C');
         
-    }
-    public void showInfo(){
-        System.out.println("Ma SV : "+getMaSV());
-        System.out.println("Diem trung binh : "+getDiem());
-        System.out.println("Tuoi : "+getTuoi());
-        System.out.println("Lop : "+getLop());
-        
-    }
-    public void hocBong(){
-        if(getDiem()> 8) System.out.println(" SV DUoc hoc bong");
-        else System.out.println("SV Ko duoc hoc bong");
-    }
-    
 
-    
-     public static void main(String[] args) {
+       
+    }
+
+    public void showInfo() {
+        System.out.println("Ma SV : " + getMaSV());
+        System.out.println("Diem trung binh : " + getDiem());
+        System.out.println("Tuoi : " + getTuoi());
+        System.out.println("Lop : " + getLop());
+
+    }
+
+    public void hocBong() {
+        if (getDiem() > 8) {
+            System.out.println(" SV được học hổng");
+        } else {
+            System.out.println("SV không được học bổng");
+        }
+    }
+
+    public static void main(String[] args) {
         // TODO code application logic here
         Student a = new Student();
         a.inputInfo();
         a.showInfo();
         a.hocBong();
-        
+
     }
 
-   
-    
-    
 }

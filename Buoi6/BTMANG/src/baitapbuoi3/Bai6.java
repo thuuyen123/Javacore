@@ -26,7 +26,7 @@ public class Bai6 {
     public static void sumC(int a[][]){
         int sumC=0;
         for (int j = 0; j< 3; j++) {
-            System.out.println("Tổng cột thứ "+(j+1)+" là: ");
+            System.out.println("Tổng cột thứ "+(j+1)+" là: "+"là");
             for (int i = 0; i < 3; i++) {
                 sumC += a[i][j];  
             }

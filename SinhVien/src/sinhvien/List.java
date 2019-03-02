@@ -6,7 +6,6 @@
 package sinhvien;
 
 import java.util.Scanner;
-
 /**
  *
  * @author Thu Uyên
@@ -15,12 +14,14 @@ public class List {
     public SinhVien[] sinhvien;
     
     public void start(){
+      //  SinhVien sv = new SinhVien();
         Scanner sc = new Scanner(System.in);
         System.out.println("Nhập số lượng sinh viên:");
         int n = sc.nextInt();
-        sc.nextLine();
-        sinhvien = new SinhVien[n];
+       
+        this.sinhvien = new SinhVien[n];
         for (int i = 0; i < n; i++) {
+            sinhvien[i] = new SinhVien();
             sinhvien[i].Nhap();
         }
     }
@@ -70,7 +71,7 @@ public class List {
                     break;
                 }
             }
-        }while(lc>0);
+        }while(lc>0 && lc < 5 );
         
     }
     

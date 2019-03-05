@@ -24,7 +24,7 @@ public class Bai6 {
             else b=b-a;
         }
        System.out.printf("Bcnn bang %d", m);
-       System.out.printf("UCLN bang %d ", a);
+       System.out.printf("UCLN bang %d ", b);
        
         // TODO code application logic here
     }

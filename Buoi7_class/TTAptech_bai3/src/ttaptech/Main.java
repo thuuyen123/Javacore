@@ -5,10 +5,17 @@
  */
 package ttaptech;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Thu Uyên
  */
 public class Main {
-    
+    public static void main(String[] args) {
+        HocBong hb = new HocBong();
+        hb.Nhap();
+        hb.xuat();
+        hb.check();
+    }
 }

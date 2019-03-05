@@ -79,22 +79,22 @@ public class SinhVien {
     public void Nhap(){
         Scanner sc = new Scanner(System.in);
         System.out.println("Nhập tên sinh viên");
-     //   do{
-            try{
-                ten = sc.nextLine();
-            }catch(Exception e){
-                System.out.println("Đã xảy ra lỗi");
-            }
-   //     }while(ten.)
+        ten = sc.nextLine();
+        do{
+            System.out.println("Nhập mã sinh viên");
+            maSV = sc.nextLine();
         
-        System.out.println("Nhập mã sinh viên");
-        maSV = sc.nextLine();
+        }while(this.maSV.charAt(1) != 'H');
         System.out.println("Nhập lớp");
         lop = sc.nextLine();
         System.out.println("Nhập ngành học");
         Nganh = sc.nextLine();
         System.out.println("Nhập điểm trung bình của sinh viên ");
-        diemTB = sc.nextFloat();
+        try{
+            diemTB = sc.nextFloat(); 
+        }catch( Exception e){
+            System.out.println("Đã xảy ra lỗi");
+        }
     }
     public void xuat(){
         System.out.println("Tên SV: "+ ten);

@@ -83,8 +83,7 @@ public class SinhVien {
         do{
             System.out.println("Nhập mã sinh viên");
             maSV = sc.nextLine();
-        
-        }while(this.maSV.charAt(1) != 'H');
+        }while(this.maSV.indexOf('H')== -1);
         System.out.println("Nhập lớp");
         lop = sc.nextLine();
         System.out.println("Nhập ngành học");

@@ -11,7 +11,7 @@ import java.util.Scanner;
  * @author Thu Uyên
  */
 public class List {
-    public SinhVien[] sinhvien;
+    private SinhVien[] sinhvien;
     
     public void start(){
       //  SinhVien sv = new SinhVien();

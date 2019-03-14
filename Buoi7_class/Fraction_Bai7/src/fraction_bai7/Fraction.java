@@ -123,7 +123,7 @@ public class Fraction {
             System.out.println("7.Tính thương 2 phân số");
             System.out.println("0.Thoát");
             System.out.println("Mời bạn chọn thao tác: ");
-            lc= sc.nextInt();
+            lc = sc.nextInt();
             switch(lc){
                 case 0:{
                     break;

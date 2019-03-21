@@ -32,7 +32,9 @@ public class Camera extends Product {
         Scanner sc = new Scanner(System.in);
         System.out.println("Nhap hasWifi: ");
         int choise = sc.nextInt();
-        this.hasWifi= choise == 1 ? true : false;
+        if( choise== 1) this.hasWifi = true;
+        else this.hasWifi = false;
+             
         
     }
     @Override

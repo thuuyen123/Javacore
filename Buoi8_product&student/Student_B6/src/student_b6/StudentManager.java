@@ -17,7 +17,7 @@ public class StudentManager extends Student {
         this.listStudents = new Student[MAX_STUDENT];
         this.currQuantity =0;
     }
-    
+   
     public boolean add(Student stud){
         if(currQuantity < StudentManager.MAX_STUDENT){
             this.listStudents[this.currQuantity] = stud;
@@ -33,35 +33,19 @@ public class StudentManager extends Student {
         for (int i = 0; i < this.listStudents.length; i++) {
             Student temp = this.listStudents[i];
             if(temp.getName().equals(name)){
-                System.out.println(temp);
+                temp.list();
                 k = true;
             }
-            
         }
-        if(k == false) System.out.println("Khong tim thay");
+        if(k == false) System.out.println("Không tìm thấy!");
     }
-    public void list(){
-        for (Student student : listStudents) {
-             if(student != null)
-                System.out.println(student);
-        }
-    }
+   
     public void list(boolean order){
         if(order){
             //sx tang dan theo ten
             for (int i = 0; i < this.listStudents.length-1; i++) {
                 for (int j = 0; j < this.listStudents.length; j++) {
-                    if(this.listStudents[i].getName().compareTo(this.listStudents[j].getName()) > 0 ){
-                        Student temp = this.listStudents[i];
-                        this.listStudents[i] = this.listStudents[j];
-                        this.listStudents[j] = temp;
-                    }
-                }
-            }
-        }else{
-            //sx giam dan theo ten
-            for (int i = 0; i < this.listStudents.length-1; i++) {
-                for (int j = 0; j < this.listStudents.length; j++) {
+                    if (this.listStudents[i] == null || this.listStudents[j] == null) continue;
                     if(this.listStudents[i].getName().compareTo(this.listStudents[j].getName()) < 0 ){
                         Student temp = this.listStudents[i];
                         this.listStudents[i] = this.listStudents[j];
@@ -69,8 +53,25 @@ public class StudentManager extends Student {
                     }
                 }
             }
+            
+        }else{
+            //sx giam dan theo ten
+            for (int i = 0; i < this.listStudents.length-1; i++) {
+                for (int j = 0; j < this.listStudents.length; j++) {
+                    if (this.listStudents[i] == null || this.listStudents[j] == null) continue;
+                    if(this.listStudents[i].getName().compareTo(this.listStudents[j].getName()) > 0 ){
+                        Student temp = this.listStudents[i];
+                        this.listStudents[i] = this.listStudents[j];
+                        this.listStudents[j] = temp;
+                    }
+                }
+            }
         }
-        
+        for (int i = 0; i < listStudents.length; i++) {
+            this.listStudents[i].list();
+        }
     }
+    
+    
         
 }

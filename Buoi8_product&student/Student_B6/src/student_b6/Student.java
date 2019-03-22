@@ -5,11 +5,14 @@
  */
 package student_b6;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Thu Uyên
  */
 public class Student{
+    
     private String name;
     private String email;
     private int age;
@@ -52,5 +55,20 @@ public class Student{
     public String toString() {
         return "Student{" + "name=" + name + ", email=" + email + ", age=" + age + '}';
     }
-    
+    Scanner sc = new Scanner(System.in);
+    public void addNew(){
+        System.out.print("Name: ");
+        name = sc.nextLine();
+        System.out.print("EMAIL: ");
+        email = sc.nextLine();
+        System.out.print("AGE: ");
+        age = sc.nextInt();
+    }
+     public void list(){
+        System.out.println("+=====+==============+=======+");
+        System.out.println("|NAME | EMAIL        |AGE    |");
+        System.out.println("+=====+==============+=======+");
+        System.out.printf("|%5s|%14s|%7d|\n",name, email,age);
+        System.out.println("+-----+--------------+-------+");
+    }
 }

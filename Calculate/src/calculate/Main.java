@@ -3,16 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package dagiac_bai12;
+package calculate;
 
 /**
  *
  * @author Thu Uyên
  */
-public class HCN extends HBH{
-    private int chieudai;
-    private int chieurong;
-    HBH hbh = new HBH();
-   
+public class Main {
+    public static void main(String[] args) {
+       //Calculate cal = new 
+    }
 }
-    

@@ -96,12 +96,12 @@ public class SinhVien {
         System.out.println("Ngành học: "+ Nganh);
         System.out.println("Điểm trung bình của SV: "+ diemTB);
     }
-    public String hocLuc(){
-        //String hocluc = "";
-        if(diemTB >= 8 && diemTB <=10) return "Gioi";
-        if(diemTB < 8 && diemTB >=6.5 ) return "Kha";
-        if(diemTB <6.5 && diemTB >=4) return "TB";
-        if(diemTB<4 &&diemTB >= 0) return "Yeu";
-        return "";
-    }
+//    public String hocLuc(){
+//        //String hocluc = "";
+//        if(diemTB >= 8 && diemTB <=10) return "Gioi";
+//        if(diemTB < 8 && diemTB >=6.5 ) return "Kha";
+//        if(diemTB <6.5 && diemTB >=4) return "TB";
+//        if(diemTB<4 &&diemTB >= 0) return "Yeu";
+//        return "";
+//    }
 }

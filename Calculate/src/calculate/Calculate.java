@@ -3,19 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package dagiac_bai12;
+package calculate;
 
 /**
  *
  * @author Thu Uyên
  */
-public class DaGiac {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+public abstract class Calculate {
+    public int add(int a, int b){
+        return a+b;
     }
+    public abstract void sum(int[] arr);
+    public abstract double average(int[] arr);
     
+    
+    
+   
 }

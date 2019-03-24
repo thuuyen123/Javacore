@@ -9,10 +9,8 @@ package dagiac_bai12;
  *
  * @author Thu Uyên
  */
-public class HCN extends HBH{
-    private int chieudai;
-    private int chieurong;
-    HBH hbh = new HBH();
-   
+public  abstract class Polyon {
+    public abstract void  area();
+    public abstract void Chuvi();
+    public abstract void input();
 }
-    

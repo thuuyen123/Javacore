@@ -9,10 +9,6 @@ package dagiac_bai12;
  *
  * @author Thu Uyên
  */
-public class HCN extends HBH{
-    private int chieudai;
-    private int chieurong;
-    HBH hbh = new HBH();
-   
-}
+public class HV extends HCN {
     
+}

@@ -5,7 +5,6 @@
  */
 package exercise2;
 
-import Bai5.*;
 import java.util.Scanner;
 
 /**

@@ -102,6 +102,23 @@ public class SinhVienModel {
         }
         return sv;
     }
+    public ArrayList<SinhVien> searchName(String name){
+        ArrayList<SinhVien> sv = new ArrayList<>();
+        for (int i = 0; i < count; i++) {
+           if(sinhViens[i].getTen().equals(name) ){
+                sv.add(sinhViens[i]);
+            }
+        } 
+        return sv;
+    }
+    public ArrayList<SinhVien> hienthiDS(){
+        ArrayList<SinhVien> sv = new ArrayList<>();
+        for (int i = 0; i < count; i++) {
+            sv.add(sinhViens[i]);
+            
+        }
+        return sv;
+    }
     public int getCount() {
         return count;
     }

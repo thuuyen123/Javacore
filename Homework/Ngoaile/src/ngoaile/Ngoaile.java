@@ -5,24 +5,32 @@
  */
 package ngoaile;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Thu Uyên
  */
 public class Ngoaile {
 
+//    public double div(double a, double b) throws Exception{
+//        if(b==0) throw new  ArithmeticException();
+//        return a/b;
+//    }
     /**
      * @param args the command line arguments
      */
+    
     public static void main(String[] args) {
-        // TODO code application logic here
-        try{
-            int x=1/0;
-            System.out.println(x);
-        }catch(Exception e){
-            System.out.println("");
-        }
-            
+        Calculate cal = new Calculate();
+        Scanner sc = new Scanner(System.in);
+        int a = cal.inputNumber();
+        int b = cal.inputNumber();
+        System.out.println(a+b);
+       
+        
     }
+            
+    
     
 }

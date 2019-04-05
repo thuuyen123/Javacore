@@ -6,6 +6,7 @@
 package hocvien;
 
 import java.util.Scanner;
+import jdk.internal.org.objectweb.asm.tree.TryCatchBlockNode;
 
 /**
  *
@@ -29,8 +30,8 @@ import java.util.Scanner;
                 throw new Exception("Phải bắt đầu bằng HV và 3 số:");
         } catch (Exception e) {
             System.out.println("Sai định đạng");
-            System.out.println(e.getMessage());
-            return this.inputId();
+            System.out.println(e.getMessage());//getMessage là tên của ngoại lệ
+            return this.inputId();// đệ quy
         }
         return tempId;
     }
@@ -51,14 +52,26 @@ import java.util.Scanner;
     public double inputMark() {
         double tempMark = Double.parseDouble(this.scanner.nextLine());
         //Kiem tra dieu kien
-        
+        try {
+            if(tempMark >10 || tempMark < 1) throw  new Exception("Điểm phải <= 10 và >= 1");
+        } catch (Exception e) {
+            System.out.println("Sai định dạng");
+            System.out.println(e.getMessage());
+            return this.inputMark();
+        }
         return tempMark;
     }
     
     public String inputPhone() {
         String tempPhone = this.scanner.nextLine();
         //Kiem tra dieu kien
-//        if (tempPhone.matches("^(\\+\\d{1,2}\\s)?\\(?\\d{3}\\)?[\\s.-]\\d{3}[\\s.-]\\d{4}$"))
+        try {
+            if(tempPhone.length()!=10 || tempPhone.charAt(0) != '0' ) throw  new Exception("Số điện thoại phải có 10 số và số đầu tiên lá 0");
+        } catch (Exception e) {
+            System.out.println("Sai định dạng");
+            System.out.println(e.getMessage());
+            return this.inputPhone();
+        }
         return tempPhone;
     }
             

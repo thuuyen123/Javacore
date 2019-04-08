@@ -18,30 +18,22 @@ public class FileUtils {
     Scanner sc = new Scanner(System.in);
   
     public void Folder(){
-        int dem = 0;
-        System.out.println("Nhap duoi cua folder");
-        String folder = sc.nextLine();
+       
         for (File file : files) {
-            if(file.getName().endsWith(folder)){
+            if(file.isDirectory()){
                 System.out.println(file.getPath());
-                dem++;
             } 
-            
-        }
-        if(dem == 0 ) System.out.println("Khong  co file nay");
+         }
     }
     public void file(){
-        System.out.println("Nhap duoi cua file");
-        String filee = sc.nextLine();
-        int dem = 0;
+        
         for (File file : files) {
-            if(file.getName().endsWith(filee)){
+            if(!file.isDirectory())
                 System.out.println(file.getPath());
-                dem++;
             }
         }
-        if(dem == 0 ) System.out.println("Khong  co file nay");
-    }
+        
+    
     public void fileAnh(){
         int dem = 0;
         for (File file : files) {
@@ -74,8 +66,23 @@ public class FileUtils {
         String path = sc.nextLine();
         File filess = new File(path);
         File[] filel = filess.listFiles();
-        for (File file : filel) {
-            
+        if(filess.exists()){
+            for (File file : filel) {
+            System.out.println(file.lastModified());
+            }
         }
+        else{
+            System.out.println("Path ko ton tai");
+            System.out.println("Nhap lai");
+            Time();
+        }
+//        for (File file : filel) {
+//            System.out.println(file.lastModified());
+//        }
     }
+//    public void Size(){
+//        for (File file : files) {
+//            System.out.println(fi);
+//        }
+ //   }
 }

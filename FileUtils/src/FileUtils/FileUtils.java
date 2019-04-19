@@ -83,8 +83,31 @@ public class FileUtils {
         }else{
             return null;
         }
+    } 
+    public File[] getFileExt(String path, String exe){
+        File file = new File(path);
+        if(file.exists()){
+           if(!file.isDirectory()){
+               File[] listFile = file.listFiles();
+               File[] resultArray = new File[listFile.length];
+               int indexArray = 0;
+               for(File f : listFile){
+                   if(f.getName().endsWith(exe)){
+                       resultArray[indexArray] =f;
+                       indexArray++;
+                   }
+               }
+               return resultArray;
+           }else{
+               return null;
+           }
+        }else{
+            return null;
+        }
     }
+    
 }
+   
 //        public File[] getFile
 //    File file = new File("F:\\NetBeans\\");
 //    File[] files = file.listFiles();

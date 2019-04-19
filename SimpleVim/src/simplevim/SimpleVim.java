@@ -6,16 +6,36 @@
 package simplevim;
 
 import java.io.File;
+import java.io.IOException;
+import java.util.Scanner;
+
+
 
 /**
  *
  * @author Thu Uyên
  */
 public class SimpleVim {
-    public void initFile(){
-        System.out.println("Nhap ");
-        
+    private String path;
+
+    public String getPatth() {
+        return path;
     }
+
+    public void setPath(String path) {
+        this.path = path;
+    }
+    Scanner sc = new Scanner(System.in);
+    File f = new File(path);
+    public void initContent() throws IOException{
+        if(f.exists()){
+            System.out.println(f.getPath());
+        }
+        else{
+            f.createNewFile();
+        }
+    }
+    
     
     
 }

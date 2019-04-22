@@ -6,6 +6,7 @@
 package FileUtils;
 
 import java.io.File;
+import java.io.IOException;
 
 
 /**
@@ -105,7 +106,26 @@ public class FileUtils {
             return null;
         }
     }
-    
+     public void Time(String path){
+//        System.out.println("Nhap path:");
+//        String path = sc.nextLine();
+        File filess = new File(path);
+        File[] filel = filess.listFiles();
+        if(filess.exists()){
+            for (File file : filel) {
+            System.out.println(file.lastModified());
+            }
+        }
+        else {
+            System.out.println("File khong ton tai");
+            System.out.println(filess.mkdir());
+            try {
+                System.out.println(filess.createNewFile());
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
+        }
+    }
 }
    
 //        public File[] getFile
@@ -157,26 +177,7 @@ public class FileUtils {
 //        }
 //        if(dem == 0 ) System.out.println("Khong  co file nay");
 //    }
-//    public void Time(String path){
-////        System.out.println("Nhap path:");
-////        String path = sc.nextLine();
-//        File filess = new File(path);
-//        File[] filel = filess.listFiles();
-//        if(filess.exists()){
-//            for (File file : filel) {
-//            System.out.println(file.lastModified());
-//            }
-//        }
-//        else {
-//            System.out.println("File khong ton tai");
-//            System.out.println(filess.mkdir());
-//            try {
-//                System.out.println(filess.createNewFile());
-//            } catch (IOException ex) {
-//                ex.printStackTrace();
-//            }
-//        }
-//    }
+//   
 //    public void Size(){
 //        for (File file : files) {
 //            System.out.println(file.getPath());

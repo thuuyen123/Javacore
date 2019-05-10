@@ -8,6 +8,7 @@ package java12_menu;
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
+import java.io.ObjectInputStream;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -21,7 +22,7 @@ public class Menu {
     private Map<String, String> map;
     public Menu(){
         this.map = new HashMap<>();
-        this.loatData("vi");//"en" có nghĩa là English còn "vn" là VNam
+        this.loatData("en");//"en" có nghĩa là English còn "vn" là VNam
     }
     public void loatData(String lang){
         try {
@@ -38,6 +39,15 @@ public class Menu {
                 String[] split = line.split("=");// readLine để đọc dữ liệu từ file_ và trả về chuỗi
                 this.map.put(split[0], split[1]);
             }
+        } catch (Exception e) {
+            e.printStackTrace();
+            
+        }
+    }
+    public void doc(String file){
+        try {
+            ObjectInputStream ois = new ObjectInputStream(new FileInputStream(file) );
+            ois.readObject();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -57,6 +67,7 @@ public class Menu {
             int  c = Integer.parseInt(sc.nextLine());
             switch(c){
                 case 1:{
+                    
                     break;
                 }
                 case 2:{

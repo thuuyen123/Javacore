@@ -16,7 +16,9 @@ public class Main {
      */
     public static void main(String[] args) {
         Menu menu = new Menu();
-        menu.print();
+//        menu.print();
+        String file = "menu-en.locate";
+        menu.doc(file);
         // TODO code application logic here
     }
     

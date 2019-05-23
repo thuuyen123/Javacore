@@ -20,7 +20,6 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
         try {// arl +enter
             Class.forName("com.mysql.jdbc.Driver");
             String connStr = "jdbc:mysql://localhost:3306/QUANLYTHUVIEN";
@@ -30,10 +29,11 @@ public class Main {
                 System.out.println("-----------------------");
                 //sau khi ket nối thành công
                 Statement stmt = conn.createStatement();
-                ResultSet rs = stmt.executeQuery("SELECT ten, khoa  "
-                        + "FROM DOCGIA"
-                        + "ORDER BY khoa asc; ");
-               
+                ResultSet rs = stmt.executeQuery("SELECT * FROM DOCGIA ORDER BY KHOA ASC");
+                while(rs.next()){
+                    System.out.print(rs.getString("ten")+", ");
+                    System.out.println(rs.getString("khoa"));
+                }
             }
             else {
                 System.out.println("ket noi that bai");

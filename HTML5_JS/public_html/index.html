@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Ứng dụng máy tính</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .bth{
+                width: 50px;
+            }
+        </style>
+        <script language="javascript" type="text/javascript">
+        </script>
+        <script language="javascript" type="text/javascript">
+            function add(){
+                a=Number(document.calculator.sothu1.value);
+                b=Number(document.calculator.sothu2.value);
+                c=a+b;
+                document.calculator.total.value = c;
+            }
+        </script>
+        <script language="javascript" type="text/javascript">
+            function sub(){
+                a=Number(document.calculator.sothu1.value);
+                b=Number(document.calculator.sothu2.value);
+                c=a-b;
+                document.calculator.total.value = c;
+            }
+        </script>
+        <script language="javascript" type="text/javascript">
+            function mub(){
+                a=Number(document.calculator.sothu1.value);
+                b=Number(document.calculator.sothu2.value);
+                c=a*b;
+                document.calculator.total.value = c;
+            }
+        </script>
+        <script language="javascript" type="text/javascript">
+            function div(){
+                a=Number(document.calculator.sothu1.value);
+                b=Number(document.calculator.sothu2.value);
+                c=a/b;
+                document.calculator.total.value = c;
+            }
+        </script>
+        <script language="javascript">
+            function  check(){
+                if(document.calculator.sothu1.value=="" || document.calculator.sothu2.value=="") return false;
+                return true;
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Javascript căn bản</h1>
+        <h2>Máy tính đơn giản</h2>
+        <form name="calculator">
+            So thu 1: <input type="text" name="sothu1" > 
+            <input type="button" value=" + " class="bth" onclick="javascript:add();">
+            <input type="button" value=" - " class="bth" onclick="javascript:sub();"> <br><br>
+            So thu 2: <input type="text" name="sothu2"> 
+            <input type="button" value=" * " class="bth" onclick="javascript:mub();">
+            <input type="button" value=" : " class="bth" onclick="javascript:div();"> <br>
+            </br>
+            Ket qua:<input name="total" readonly>
+        </form>
+       
+    </body>
+</html>

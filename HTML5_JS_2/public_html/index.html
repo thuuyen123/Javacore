@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function goGg(){
+                var boxEle = document.getElementById("box");
+                var text;
+                var username = document.getElementById('username').value;
+                var password = document.getElementById('password').value;
+                var website = document.getElementById('website').value;
+                var message = document.getElementById('message').value;
+                // Bước 2: Kiểm tra dữ liệu hợp lệ hay không
+                if(isNaN(username)){
+                    boxEle.style.backgroundColor = "red";
+                    boxEle.style.border = "1px solid white";
+                    boxEle.innerText = "This field is required";
+                }
+            }
+                    
+        </script>
+    </head>
+  
+    <div class="bod">
+        <form>
+            <table style="border: none">
+                <tr>
+                    <td>Name:</td>
+                    <td><input type="text" name="name" id="name" /></td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td><input type="text" name="email" id="email"/></td>
+                </tr>
+                <tr>
+                    <td>Website:</td>
+                    <td><input type="text" name="web" id="web"/></td>
+                </tr>
+                <tr>
+                    <td>Message:</td>
+                    <td><input type="text" name="message" id="message" style="height: 40px"/></td>
+                </tr>
+                <tr>
+                    <td> </td>
+                    <td><input type="submit" value="Submit" style="border-radius: 8px" id="btn" onclick="goGg()"/></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    </body>
+</html>

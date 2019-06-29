@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Calculator</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .calculation_keys{
+                display: grid;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="calculation">
+                <div class="calculation_display">0</div>
+                <div class="calculation_keys">
+                    <button >+</button>
+                    <button class='key' data-action="subtract">-</button>
+                    <button class='key' data-action="multiply">*</button>
+                    <button class='key' data-action="divide">÷</button>
+                    <button>7</button>
+                    <button>8</button>
+                    <button>9</button>
+                    <button>4</button>
+                    <button>5</button>
+                    <button>6</button>
+                    <button>1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button>0</button>
+                    <button data-action='decimal'>.</button>
+                    <button data-action='clear'>AC</button>
+                    <button class='key-equal' data-action='calculate'>=</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

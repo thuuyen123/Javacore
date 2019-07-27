@@ -46,6 +46,7 @@ public class RegisterServlet extends HttpServlet {
             user.setEmail(request.getParameter("email"));
             user.setAddress(request.getParameter("address"));
             model.insert(user);
+//            model.delete(user);
             
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");

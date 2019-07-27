@@ -26,6 +26,15 @@ public class UserModel {
         pstmt.setString(3, user.getFullname());
         pstmt.setString(4 , user.getEmail());
         pstmt.setString(5, user.getAddress());
+        
+        return pstmt.executeUpdate();
+    }
+    public int delete(User user) throws ClassNotFoundException, SQLException, SQLException{
+        DBconnector db = new DBconnector();
+        Connection conn = db.getConnection();
+        String sql = "DELETE FROM user WHERE username=?";
+        PreparedStatement pstmt = conn.prepareStatement(sql);
+        pstmt.setString(1, user.getUsername());
         return pstmt.executeUpdate();
     }
     public ResultSet check(User user) throws ClassNotFoundException, SQLException{

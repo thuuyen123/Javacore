@@ -1,4 +1,5 @@
-package javacore;
+package com.btweb;
+
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -17,23 +18,26 @@ import java.util.List;
  *
  * @author Thu Uyên
  */
-public class StudentModel {
- 
-    public List<Student> getStudent() throws SQLException, ClassNotFoundException{
+public class SinhVienModel {
+    public List<SinhVien> getSinhVien() throws SQLException, ClassNotFoundException{
         DBconnector db = new DBconnector();
         Connection conn = db.getConnection();
-        String query = "SELECT * FROM students";
+        String query = "SELECT * FROM sinhvien";
         PreparedStatement pstmt = conn.prepareStatement(query);
         ResultSet rs = pstmt.executeQuery();
-        List<Student> list = new ArrayList<>();
+        List<SinhVien> list = new ArrayList<>();
         while(rs.next()){
-            Student s = new Student();
-            s.setId(rs.getInt("id"));
-            s.setName(rs.getString("name"));
-            s.setEmail(rs.getString("email"));
-            s.setPass(rs.getString("pass"));
+            SinhVien s = new SinhVien();
+            s.setTt(rs.getInt("tt"));
+            s.setHoten(rs.getString("hoten"));
+            s.setKhoa(rs.getString("khoa"));
+            s.setLop(rs.getString("lop"));
             list.add(s);
         }
         return list;
     }
+    public void menu(){
+        
+    }
+
 }

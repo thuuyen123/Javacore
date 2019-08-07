@@ -43,7 +43,7 @@ public class addServlet extends HttpServlet {
         Student st = new Student(hoten, khoa, lop);
         StudentModel model = new StudentModel();
         model.addStudent(st);
-        response.sendRedirect("home.jps");// phản ứng chuyển hướng
+        response.sendRedirect("home.jsp");// phản ứng chuyển hướng
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

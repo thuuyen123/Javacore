@@ -1,12 +1,12 @@
 <%-- 
     Document   : home
-    Created on : Aug 4, 2019, 3:42:06 PM
+    Created on : Aug 5, 2019, 12:17:15 AM
     Author     : Thu Uyên
 --%>
 
-<%@page import="com.java.demo.Student"%>
+<%@page import="demo.java.Student"%>
 <%@page import="java.util.List"%>
-<%@page import="com.java.demo.StudentModel"%>
+<%@page import="demo.java.StudentModel"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -23,34 +23,35 @@
                 <thead class="thead-dark">
                     <tr>
                         <th>#</th>
-                        <th>Họ tên</th>
+                        <th>Họ Tên</th>
                         <th>Khoa</th>
                         <th>Lớp</th>
                         <th>Chức năng</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <% 
-                    StudentModel model = new StudentModel();
-                    List<Student> list = model.getStudent();
-                    for (Student st : list) {
-                    %>
+                    <%
+                        StudentModel model = new StudentModel();
+                        List<Student> list = model.getStudent();
+                        for (Student student : list) {
+                    %>  
                     <tr>
-                        <td><%= st.getId() %></td>
-                        <td><%= st.getHoten() %></td>
-                        <td><%= st.getKhoa() %></td>
-                        <td><%= st.getLop() %></td>
+                        <td> <%= student.getId() %></td>
+                        <td> <%= student.getHoten() %></td>
+                        <td> <%= student.getKhoa() %></td>
+                        <td> <%= student.getLop() %></td>
                         <td>
-                            <a class='btn btn-primary' hrep="addServlet?id=<%= st.getId() %>"> Sửa</a>
-                            <a class='btn btn-danger' href="">Xóa</a>
+                        <a class="btn btn-primary" href=""> Xóa</a>
+                        <a class="btn btn-danger" href="">Sửa</a>
                         </td>
                     </tr>
-                    <%   }
-                        %>
+                    <%
+                            }
+                    %>
                 </tbody>
+                
             </table>
-            <a class="btn btn-success" href="add.jsp"> Thêm mới</a>
+                <a class="btn btn-success" href="add.jsp">Thêm mới </a>
         </div>
-       
     </body>
 </html>

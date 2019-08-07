@@ -3,14 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package new_ser;
+package getServlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.Enumeration;
-import java.util.List;
-import javacore.Student;
-import javacore.StudentModel;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -19,10 +15,10 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author pc
+ * @author Thu Uyên
  */
-@WebServlet(name = "StudentServlet", urlPatterns = {"/students"})
-public class Student_Servlet extends HttpServlet {
+@WebServlet(name = "java", urlPatterns = {"/list"})
+public class java extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -41,44 +37,12 @@ public class Student_Servlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet StudentServlet</title>");
+            out.println("<title>Servlet java</title>");            
             out.println("</head>");
             out.println("<body>");
-
-            Enumeration<String> params = request.getParameterNames();
-            while (params.hasMoreElements()) {
-               String names = params.nextElement();String key = params.nextElement();
-               out.println(key + ": " + request.getParameter(key));    
-               out.println("<br/>");
-                
-            }
-            out.println("<h1>Danh sách sinh viên</h1>");
-            
-            StudentModel model = new StudentModel();
-            List<Student> students = model.getStudent();
-
-            out.println("<table border='1'>");
-            out.println("<tr>");
-            out.println("<th>Id</th>");
-            out.println("<th>Name</th>");
-            out.println("<th>Email</th>");
-            out.println("<th>Pass</th>");
-            out.println("</tr>");
-
-            for (Student student : students) {
-                out.println("<tr>");
-//                out.println("<td>" + request.getParameter(student.getId()) + "</td>");
-                out.println("<td>" + student.getId()+ "</td>");
-                out.println("<td>" + student.getName()+ "</td>");
-                out.println("<td>" +student.getEmail()+ "</td>");
-                out.println("<td>" +student.getPass()+ "</td>");
-                out.println("</tr>");
-            }
-            out.println("</table>");
+            out.println("<h1>Servlet java at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
-        } catch (Exception e) {
-            e.printStackTrace();
         }
     }
 

@@ -1,37 +1,35 @@
-package com.btweb;
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+package demo.java;
 
 /**
  *
  * @author Thu Uyên
  */
-public class SinhVien {
-    private int tt;
-    private String hoten;
-    private String khoa;
-    private String lop;
+public class Student {
+    private int id; 
+    private String hoten; 
+    private String khoa; 
+    private String lop; 
 
-    public SinhVien() {
+    public Student() {
     }
 
-    public SinhVien(int tt, String hoten, String khoa, String lop) {
-        this.tt = tt;
+    public Student(String hoten, String khoa, String lop) {
         this.hoten = hoten;
         this.khoa = khoa;
         this.lop = lop;
     }
 
-    public int getTt() {
-        return tt;
+    public int getId() {
+        return id;
     }
 
-    public void setTt(int tt) {
-        this.tt = tt;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getHoten() {

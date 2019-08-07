@@ -18,8 +18,7 @@ public class Student {
     public Student() {
     }
 
-    public Student(int id, String hoten, String khoa, String lop) {
-        this.id = id;
+    public Student( String hoten, String khoa, String lop){
         this.hoten = hoten;
         this.khoa = khoa;
         this.lop = lop;

@@ -3,20 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package demo.java;
+package config;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+
 
 /**
  *
  * @author Thu Uyên
  */
 public class DBconnector {
-    public Connection getConnect () throws ClassNotFoundException, SQLException{
+    public Connection getConnection() throws ClassNotFoundException, SQLException{
         Class.forName("com.mysql.jdbc.Driver");
-        String sql = "jdbc:mysql://localhost:3306/dulieusinhvien";
+        String sql = "jdbc:mysql://localhost:3306/web_jsp_servlet";
         Connection conn = DriverManager.getConnection(sql, "root", "");
         return conn;
     }

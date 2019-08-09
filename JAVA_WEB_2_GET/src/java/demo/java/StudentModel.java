@@ -52,11 +52,26 @@ public class StudentModel {
     public int addStudent(Student s) throws ClassNotFoundException, SQLException{
         DBconnector db = new DBconnector();
         Connection conn = db.getConnect();
-        String query = "INSELT INTO sinhvien( `hoten`, `khoa`, `lop`) VALUES(?,?,?)";
+        String query = "INSELT INTO sinhvien(hoten, khoa, lop) VALUES(?,?,?)";
         PreparedStatement pstmt = conn.prepareStatement(query);
         pstmt.setString(1, s.getHoten());
         pstmt.setString(2, s.getKhoa());
         pstmt.setString(3, s.getLop());
         return pstmt.executeUpdate();
     }
+    public int delete(int id) throws ClassNotFoundException, SQLException{
+        DBconnector db = new DBconnector();
+        Connection conn = db.getConnect();
+        String query = "DELETE FROM sinhvien WHERE id=?";
+        PreparedStatement pstmt = conn.prepareStatement(query);
+        pstmt.setInt(1, id);
+        return pstmt.executeUpdate();
+    }
+    public int update(int id) throws ClassNotFoundException, SQLException{
+        DBconnector db = new DBconnector();
+        Connection conn = db.getConnect();
+        String query = "UPDATE sinhvien TO ";
+        return 0;
+    }
+     
 }

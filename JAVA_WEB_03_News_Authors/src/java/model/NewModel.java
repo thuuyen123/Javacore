@@ -36,7 +36,8 @@ public class NewModel {
             news.setTitle(rs.getString("title"));
             news.setSummary(rs.getString("summary"));
             news.setContent(rs.getString("content"));
-           
+            news.setImage(rs.getString("image"));
+            news.setAuthor_id(rs.getInt("author_id"));
             list.add(news);
         }
         return list;

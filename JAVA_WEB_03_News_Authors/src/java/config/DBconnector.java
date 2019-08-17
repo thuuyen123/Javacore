@@ -15,9 +15,9 @@ import java.sql.SQLException;
  */
 public class DBconnector {
     public Connection getConnection() throws ClassNotFoundException, SQLException{
-        Class.forName("com.mysql.jdbc.Driver");
-        String sql = "jdbc:mysql://localhost:3306/news_authors";
-        Connection conn = DriverManager.getConnection(sql, "root","");
+       Class.forName("com.mysql.jdbc.Driver");
+       String sql = "jdbc:mysql://localhost:3306/news_authors";
+        Connection conn = DriverManager.getConnection(sql, "root", "");
         return conn;
     }
 }

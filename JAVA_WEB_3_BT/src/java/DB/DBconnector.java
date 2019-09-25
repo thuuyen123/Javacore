@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package config;
+package DB;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -16,7 +16,7 @@ import java.sql.SQLException;
 public class DBconnector {
     public Connection getConnection() throws ClassNotFoundException, SQLException{
         Class.forName("com.mysql.jdbc.Driver");
-        String sql = "jdbc:msql://localhost:3306/bookmanager";
+        String sql = "jdbc:mysql://localhost:3306/bookmanager";
         Connection conn = DriverManager.getConnection(sql, "root", "");
         return conn;
     }

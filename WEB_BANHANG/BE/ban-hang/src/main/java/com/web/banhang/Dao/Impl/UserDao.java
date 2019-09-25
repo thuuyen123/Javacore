@@ -19,17 +19,19 @@ public class UserDao implements IUserDao {
 
     @Override
     public int count() {
-        return jdbc
-                .queryForObject("select count(*) from NguoiDung",Integer.class);
+//        return jdbc
+//                .queryForObject("select count(*) from NguoiDung",Integer.class);
+        return 0;
     }
 
     @Override
-    public List<User> getList() {
-        return jdbc
-                .query("select * from NguoiDung",
-                        (rs,rowNum) ->
-                        new User(
-                            rs.getString("HoTen")
-                        ));
+    public List<User> getList() {return null;
     }
+//        return jdbc
+//                .query("select * from NguoiDung",
+//                        (rs,rowNum) ->
+//                        new User(
+//                            rs.getString("HoTen")
+//                        ));
+//    }
 }

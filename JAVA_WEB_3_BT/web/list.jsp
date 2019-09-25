@@ -6,7 +6,6 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -16,15 +15,7 @@
         <%@include file="header.jsp" %>
     </head>
     <body>
-        <sql:setDataSource var="conn"
-                           driver="com.mysql.jdbc.Driver"
-                           user="root"
-                           password=""
-                           url="jdbc:mysql://localhost:3306/bookmanager" />
-        <sql:query var="rs" dataSource="${conn}" 
-                   sql="SELECT * FROM book" >
-              
-        </sql:query>
+        
         <table class="table table-striped">
             <tr>
                 <th>#</th>
@@ -34,7 +25,7 @@
                 <th>Số.lg</th>
                 <th>Chức năng</th>
             </tr>
-            <c:forEach var="item" items="${rs.rows}" >
+            <c:forEach var="item" items="${list}" >
                 <tr>
                     <td>${item.id}</td>
                     <td>${item.title}</td>
@@ -42,12 +33,12 @@
                     <td>${item.price}</td>
                     <td>${item.quantity}</td>
                     <td>
-                        <a href="" type="submit" class="btn btn-primary" >Sửa</a>
-                        <a href="" type="submit" class="btn btn-danger" >Xóa</a>
+                        <a href="update?id=<c:out value='${item.id}' />" type="submit" class="btn btn-primary" >Sửa</a>
+                        <a type="submit " class="btn btn-danger" href="delete?id=<c:out value='${item.id}' />" > Xóa</a>         
                     </td>
                 </tr>
             </c:forEach>
         </table>
-        <a href="" type="submit" class="btn btn-success" >Thêm mới</a>
+        <a href="add" type="submit" class="btn btn-success" >Thêm mới</a>
     </body>
 </html>

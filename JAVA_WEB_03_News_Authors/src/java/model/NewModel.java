@@ -42,4 +42,8 @@ public class NewModel {
         }
         return list;
     }
+    public int update(int id){
+        
+        return 0;
+    }
 }
